@@ -1,0 +1,86 @@
+.hero-wrapper{
+  color: white;
+  position: relative;
+  padding-bottom: 2rem;
+  background-color: var(--black);
+}
+.hero-container{
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+.image-container{
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(225, 225, 225, 0.12);
+}
+
+.image-container>img{
+  width: 100%;
+  height: 100%;
+}
+
+.hero-left{
+  gap: 3rem;
+}
+
+.hero-title{
+  position: relative;
+  z-index: 1;
+}
+.hero-title>h1{
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
+.orange-circle{
+  height: 4rem;
+  width: 4rem;
+  background: var(--orange-gradient);
+  border-radius: 999px;
+  position: absolute;
+  right: 20%;
+  top: -10%;
+  z-index: -1;
+
+}
+.search-bar {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  background-color: white; /* Background color for the search bar */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px; /* Padding around the content */
+  max-width: 400px; /* Maximum width of the search bar */
+  width: 100%; /* Responsive width */
+}
+
+.search-bar input {
+  border: none; /* Remove default border */
+  outline: none; /* Remove outline on focus */
+  padding: 10px; /* Padding inside the input */
+  font-size: 16px; /* Font size for the input text */
+  flex: 1; /* Allow the input to take up available space */
+  border-radius: 20px; /* Rounded corners for the input */
+  margin-left: 10px; /* Space between the icon and input */
+}
+
+.search-bar input::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+.search-bar .button {
+  background-color: var(--blue); /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.search-bar .button:hover {
+  background-color: darken(var(--blue), 10%); /* Darken button on hover */
+}
