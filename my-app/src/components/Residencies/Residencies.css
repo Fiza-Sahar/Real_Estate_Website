@@ -1,0 +1,114 @@
+/* Residencies.css */
+
+.residents-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.residents-cards h2 {
+  font-size: 24px;
+  color: #777;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.residents-cards h1 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.residents-cards h1::after {
+  content: '➔';
+  font-size: 24px;
+  color: #007BFF;
+  position: absolute;
+  right: -30px;
+  top: 0;
+  transform: translateY(10%);
+}
+
+.swiper {
+  padding: 20px 0;
+}
+
+.residents-cards .swiper .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.residents-cards .swiper .card:hover {
+  transform: scale(1.05);
+}
+
+.residents-cards .swiper .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.residents-cards .swiper .card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.residents-cards .swiper .card-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007BFF;
+  margin-bottom: 8px;
+}
+
+.residents-cards .swiper .card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.swiper-pagination-bullet {
+  background-color: #007BFF !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007BFF !important;
+  width: 50px;
+  height: 50px;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0056b3;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    padding: 0;
+  }
+  .residents-cards h1::after {
+    display: none;
+  }
+  .swiper-slide {
+    width: 100%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
