@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+.card-title {
+  font-size: 1.2em; /* Adjust size as needed */
+  font-weight: bold;
+  margin: 10px 0; /* Adds spacing above and below */
+}
+
 .residents-cards h2 {
   font-size: 24px;
   color: #777;
@@ -39,11 +45,15 @@
 }
 
 .residents-cards .swiper .card {
+  width: 250px; /* Set a fixed width for the card */
+  height: 350px; /* Set a fixed height for the card */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
 }
 
 .residents-cards .swiper .card:hover {
@@ -52,20 +62,21 @@
 
 .residents-cards .swiper .card-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; /* Consistent height for the image */
+  object-fit: cover; /* Maintain aspect ratio */
   border-bottom: 1px solid #ddd;
 }
 
 .residents-cards .swiper .card-content {
   padding: 20px;
   text-align: left;
+  flex-grow: 1; /* Allow content to grow and fill available space */
 }
 
 .residents-cards .swiper .card-price {
   font-size: 20px;
   font-weight: bold;
-  color: #007BFF;
+  color: #ff922d;
   margin-bottom: 8px;
 }
 
