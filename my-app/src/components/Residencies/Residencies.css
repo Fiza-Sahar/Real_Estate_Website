@@ -6,7 +6,10 @@
   padding: 20px;
   text-align: center;
 }
-
+.swiper-button-next,
+  .swiper-button-prev {
+    margin: -20px;
+  }
 .card-title {
   font-size: 1.2em; /* Adjust size as needed */
   font-weight: bold;
