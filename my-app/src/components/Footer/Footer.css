@@ -74,12 +74,18 @@
 
 .social-icons a {
   color: #ddd;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+  border-radius: 50%; /* Make the icon background circular */
+  padding: 10px; /* Add padding for hover effect */
+  display: inline-flex; /* Center align icon inside the circle */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
 }
 
 .social-icons a:hover {
-  color: #ff8c00;
-  transform: scale(1.1);
+  color: #ff8c00; /* Change icon color on hover */
+  transform: scale(1.1); /* Scale effect */
+  background-color: rgba(255, 140, 0, 0.2); /* Add a light background color on hover */
 }
 
 .footer-bottom {

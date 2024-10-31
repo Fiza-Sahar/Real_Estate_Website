@@ -1,22 +1,78 @@
-/* .h-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Header Styles */
+.h-wrapper {
+  color: white; /* Text color */
+}
 
-} */
-.h-wrapper{
-  color: white;
-}
-.h-container{
+.h-container {
+  display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--secondary);
+  align-items: center; /* Center items vertically */
+  padding: 1rem 2rem; /* Padding for better spacing */
+  position: relative; /* Added relative positioning */
 }
-.h-menu{
+
+/* Menu Styles */
+.h-menu {
+  display: flex; /* Default to flex for desktop */
   gap: 2rem;
 }
 
-.h-menu>*:hover{
+/* Toggle Button Styles */
+.h-toggle {
+  display: none; /* Hidden by default */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  color: white; /* Icon color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Size of the toggle icon */
+  position: absolute; /* Absolute positioning */
+  top: 1rem; /* Adjust this value if needed */
+  right: 2rem; /* Align to the right side */
+  z-index: 20; /* Ensure it's above other elements */
+}
+
+/* Hover Effects for Menu Items */
+.h-menu > *:hover {
   cursor: pointer;
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .h-container {
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+
+  /* Positioning the menu */
+  .h-menu {
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix the menu at the top */
+    
+    left: 0;
+    top: 0px; /* Adjust this value to position below the toggle button */
+    z-index: 10; /* Ensure it appears above other content */
+    padding: 1rem 0; /* Padding for dropdown */
+    background-color: #1E1C1B; /* Background color for the menu */
+  }
+
+  .h-menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .h-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  /* Style for each menu item in the dropdown */
+  .h-menu a {
+    padding: 0.5rem 1rem; /* Padding for better touch target */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+  }
+
+  .h-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Background on hover */
+  }
 }

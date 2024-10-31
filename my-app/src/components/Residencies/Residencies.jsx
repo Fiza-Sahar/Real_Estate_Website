@@ -53,10 +53,25 @@ const Residencies = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={4}
-        slidesPerGroup={4}
+        slidesPerView={2} // Default to showing 2 slides
+        slidesPerGroup={2} // Group 2 slides when navigating
         navigation
         pagination={{ clickable: true }}
+        breakpoints={{
+          // Define breakpoints for different screen sizes
+          320: {
+            slidesPerView: 1, // Show 1 slide on extra small screens
+            slidesPerGroup: 1, // Group 1 slide when navigating
+          },
+          640: {
+            slidesPerView: 2, // Show 2 slides on small screens
+            slidesPerGroup: 2, // Group 2 slides when navigating
+          },
+          1024: {
+            slidesPerView: 4, // Show 4 slides on medium and large screens
+            slidesPerGroup: 4, // Group 4 slides when navigating
+          },
+        }}
       >
         {cardData.map((card, index) => (
           <SwiperSlide key={index}>
@@ -64,7 +79,7 @@ const Residencies = () => {
               <img src={card.image} alt={`Slide ${index + 1}`} className="card-image" />
               <div className="card-content">
                 <h2 className="card-price">{card.price}</h2>
-                <h3 className="card-title">{card.title}</h3> {/* Added heading here */}
+                <h3 className="card-title">{card.title}</h3>
                 <p className="card-description">{card.description}</p>
               </div>
             </div>
@@ -76,5 +91,3 @@ const Residencies = () => {
 };
 
 export default Residencies;
-
-

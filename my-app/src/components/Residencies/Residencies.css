@@ -1,95 +1,47 @@
-/* Residencies.css */
-
 .residents-cards {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
-.swiper-button-next,
-  .swiper-button-prev {
-    margin: -20px;
-  }
-.card-title {
-  font-size: 1.2em; /* Adjust size as needed */
-  font-weight: bold;
-  margin: 10px 0; /* Adds spacing above and below */
-}
 
-.residents-cards h2 {
-  font-size: 24px;
-  color: #777;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.residents-cards h1 {
-  font-size: 32px;
-  color: #333;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 30px;
-  padding-right: 20px;
-}
-
-.residents-cards h1::after {
-  content: '➔';
-  font-size: 24px;
-  color: #007BFF;
-  position: absolute;
-  right: -30px;
-  top: 0;
-  transform: translateY(10%);
-}
-
-.swiper {
-  padding: 20px 0;
-}
-
-.residents-cards .swiper .card {
-  width: 250px; /* Set a fixed width for the card */
-  height: 350px; /* Set a fixed height for the card */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.card {
+  width: 100%; /* Take full width of the slide */
+  height: 350px; /* Fixed height for consistency */
   display: flex;
-  flex-direction: column; /* Align items vertically */
+  flex-direction: column;
+  align-items: center; /* Center items horizontally in the card */
+  justify-content: space-between; /* Space items evenly vertically */
+  border: 1px solid #ccc; /* Optional: Add border for visibility */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  overflow: hidden; /* Prevent overflow for images */
+  margin: 10px 0; /* Add vertical margin */
 }
 
-.residents-cards .swiper .card:hover {
-  transform: scale(1.05);
+.card-image {
+  width: 100%; /* Make the image take full width of the card */
+  height: 60%; /* Maintain proportionate height for the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
-.residents-cards .swiper .card-image {
-  width: 100%;
-  height: 200px; /* Consistent height for the image */
-  object-fit: cover; /* Maintain aspect ratio */
-  border-bottom: 1px solid #ddd;
+.card-content {
+  padding: 10px; /* Add padding to content area */
 }
 
-.residents-cards .swiper .card-content {
-  padding: 20px;
-  text-align: left;
-  flex-grow: 1; /* Allow content to grow and fill available space */
+.card-price {
+  font-size: 1.5rem; /* Style the price text */
+  font-weight: bold; /* Bold price */
 }
 
-.residents-cards .swiper .card-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff922d;
-  margin-bottom: 8px;
+.card-title {
+  font-size: 1.25rem; /* Style the title */
+  margin: 5px 0; /* Add margin */
 }
 
-.residents-cards .swiper .card-description {
-  font-size: 14px;
-  color: #555;
-}
-
-.swiper-pagination-bullet {
-  background-color: #007BFF !important;
+.card-description {
+  font-size: 1rem; /* Style the description */
+  color: #666; /* Change color for readability */
 }
 
 .swiper-button-next,
@@ -105,24 +57,17 @@
   color: #0056b3;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px;
+/* Responsive adjustments */
+@media (max-width: 838px) {
+  .card {
+    flex: 0 1 calc(50% - 20px); /* Two cards per row with margin */
+    margin: 10px; /* Add margin around each card */
+  }
 }
 
-@media (max-width: 768px) {
-  .swiper {
-    padding: 0;
-  }
-  .residents-cards h1::after {
-    display: none;
-  }
-  .swiper-slide {
-    width: 100%;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
+@media (max-width: 640px) {
+  .card {
+    flex: 0 1 100%; /* One card per row on extra small screens */
+    margin: 10px 0; /* Add vertical margin */
   }
 }
